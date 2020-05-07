@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         cuda-cudart-$CUDA_PKG_VERSION \
 cuda-compat-10-2 && \
 ln -s cuda-10.2 /usr/local/cuda && \
+apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Required for nvidia-docker v1

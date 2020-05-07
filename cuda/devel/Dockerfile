@@ -8,6 +8,7 @@ cuda-libraries-dev-$CUDA_PKG_VERSION \
         libnccl-dev=$NCCL_VERSION-1+cuda10.2 \
 libcublas-dev=10.2.2.89-1 \
 && \
-    rm -rf /var/lib/apt/lists/*
+apt-get clean && \
+rm -rf /var/lib/apt/lists/*
 
 ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs
